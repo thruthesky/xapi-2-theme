@@ -17,7 +17,7 @@ if ( urlSegment(0) == 'view' && urlSegment(1) ) $post = get_post( urlSegment(1) 
 else $post = $GLOBALS['wp_the_query']->get_queried_object();
 if ( $post ) {
     $title = $post->post_title;
-    $description = trim(preg_replace('/\s+/', ' ', mb_substr( $post->post_content, 0, 255 )));
+    $description = trim(preg_replace('/\s+/', ' ', mb_substr( strip_tags($post->post_content), 0, 255 )));
     if ( $post->post_author ) {
         $user = get_userdata( $post->post_author );
         $author = $user->display_name;
