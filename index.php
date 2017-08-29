@@ -6,7 +6,7 @@ $author = 'Sonub';
 $title = "Sonub - Sonub Network Hub";
 $keywords = "Your new best life partner,Social Network Hub,Community,Discussion,News,QnA,Questions and Answers,Buy and Sell,Jobs";
 $description = "Sonub is a social network hub for your daily activities. We wish to be a guide for your life journey.";
-$image = "//assets/img/site-preview-default-image.jpg";
+$image = "//www.sonub.com/assets/img/site-preview-default-image.jpg";
 $url = "https://www.sonub.com";
 
 $content = file_get_contents('index.html');
