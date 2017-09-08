@@ -1,0 +1,14 @@
+@import './variables';
+header {
+  padding: 1em;
+  background-color: blue;
+
+  /// color
+  color: white; a { color: white; } i { color: white; }
+  .content {
+    margin: 0 auto;
+    max-width: $max-width;
+  }
+
+
+}

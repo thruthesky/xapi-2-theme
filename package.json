@@ -1,0 +1,23 @@
+{
+  "name": "xapi-2-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thruthesky/xapi-2-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thruthesky/xapi-2-theme/issues"
+  },
+  "homepage": "https://github.com/thruthesky/xapi-2-theme#readme",
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  }
+}

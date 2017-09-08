@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  font-size: 12pt; }
+
+html, body, div, td, span, a, i, b {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", Dotum, sans-serif; }
+
+header {
+  padding: 1em;
+  background-color: blue;
+  color: white; }
+  header a {
+    color: white; }
+  header i {
+    color: white; }
+  header .content {
+    margin: 0 auto;
+    max-width: 640px; }
+
+body > main .content {
+  margin: 0 auto;
+  max-width: 640px; }
+
+body > footer .content {
+  margin: 0 auto;
+  max-width: 640px; }
