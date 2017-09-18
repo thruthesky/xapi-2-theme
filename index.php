@@ -1,5 +1,5 @@
 <?php
-if ( $ie_version < 9 ) {
+if ( isset($ie_version) && $ie_version > 1 && $ie_version < 9 ) {
     include 'index-for-old-ie.php';
     return;
 }
