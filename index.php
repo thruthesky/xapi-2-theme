@@ -1,4 +1,8 @@
 <?php
+if ( $ie_version < 9 ) {
+    include 'index-for-old-ie.php';
+    return;
+}
 
 
 

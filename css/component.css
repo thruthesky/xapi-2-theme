@@ -1,0 +1,32 @@
+header {
+    background-color: blue;
+}
+header .menus span {
+    display: inline-block;
+}
+header a {
+    display: inline-block;
+    padding: .8em;
+    color: white;
+}
+
+footer {
+    margin: 2em 0;
+    padding: 2em 0;
+    background-color: #ddd;
+}
+
+
+main .content .posts .post a {
+    display: inline-block;
+    padding: .5em;
+}
+
+
+#ie-notice {
+    margin: 1em 0;
+    padding: 1em;
+    font-size: .8em;
+    background-color: #a4a32c;
+    color: white;
+}
