@@ -1,5 +1,7 @@
 <?php
 
+
+
 /// Settings. Default settings.
 $sitename = "Sonub";
 $author = 'Sonub';
@@ -13,8 +15,17 @@ $content = file_get_contents('index.html');
 list( $before, $after ) = explode('</head>', $content, 2);
 
 
-if ( urlSegment(0) == 'view' && urlSegment(1) ) $post = get_post( urlSegment(1) );
-else $post = $GLOBALS['wp_the_query']->get_queried_object();
+
+
+if ( urlSegment(0) == 'view' && urlSegment(1) ) { // deprecated. remove urlSegment() function
+	$post = get_post( urlSegment(1) );
+}
+else if ( isset($_GET['post_view']) ) {
+	$post = get_post($_GET['post_view']);
+}
+else {
+	$post = $GLOBALS['wp_the_query']->get_queried_object();
+}
 if ( $post ) {
     $title = $post->post_title;
     $description = trim(preg_replace('/\s+/', ' ', mb_substr( strip_tags($post->post_content), 0, 255 )));
