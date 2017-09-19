@@ -3,8 +3,7 @@ if ( isset($ie_version) && $ie_version > 1 && $ie_version < 9 ) {
     include 'index-for-old-ie.php';
     return;
 }
-
-
+ob_start();
 
 /// Settings. Default settings.
 $sitename = "Sonub";
@@ -21,10 +20,11 @@ list( $before, $after ) = explode('</head>', $content, 2);
 
 
 
-if ( urlSegment(0) == 'view' && urlSegment(1) ) { // deprecated. remove urlSegment() function
-	$post = get_post( urlSegment(1) );
-}
-else if ( isset($_GET['post_view']) ) {
+//if ( urlSegment(0) == 'view' && urlSegment(1) ) { // deprecated. remove urlSegment() function
+//	$post = get_post( urlSegment(1) );
+//}
+//else
+if ( isset($_GET['post_view']) ) {
 	$post = get_post($_GET['post_view']);
 }
 else {
@@ -72,10 +72,15 @@ echo $before;
 
 list( $body_content, $after_body ) = explode('</body>', $after, 2);
 
+
 echo $body_content;
 ?>
-<a style="position: absolute; display:block; top: -100px;" href="https://www.sonub.com/wp-content/plugins/xapi-2/seo.php">More posts</a>
 </body>
 <?php
 echo $after_body;
 
+
+$html = ob_get_clean();
+
+include_once XAPI_DIR . '/display-index-html.php';
+display_index_html( $html );
